@@ -1,4 +1,4 @@
-const BankAccount = require('./BankAccount')
+const BankAccount = require('./model/BankAccount')
 
 async function getSaldo(conta){
     const res  = await BankAccount.findOne( { conta: conta } ).select('saldo -_id');
