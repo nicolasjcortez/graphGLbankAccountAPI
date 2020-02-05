@@ -1,0 +1,16 @@
+type BankAccount {
+    id: ID!
+    conta: Int!
+    saldo: Float!
+}
+
+type Query{
+    contas: [BankAccount!]!
+    saldo(conta: Int!): Float
+}
+
+type Mutation {
+    criarConta(conta: Int!, saldo: Float!): BankAccount
+    sacar(conta: Int!, valor: Float!): BankAccount
+    depositar(conta: Int!, valor: Float!): BankAccount
+}
